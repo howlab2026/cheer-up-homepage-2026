@@ -176,3 +176,49 @@ body {
     z-index: 10;
     pointer-events: none;
 }
+/* Navigation Styling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 1.5rem 2rem;
+        justify-content: center;
+    }
+    .nav-list {
+        gap: 1.5rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+}
